@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JirTech Solutions | John Robert Honculada</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Back-to-top button */
+    #backToTop {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-800 text-white fixed top-0 left-0 w-full z-50 shadow">
+    <div class="max-w-6xl mx-auto flex justify-center py-3 space-x-6">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#skills" class="hover:underline">Skills</a>
+      <a href="#portfolio" class="hover:underline">Portfolio</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="bg-blue-600 text-white text-center py-32 fade-up">
+    <h1 class="text-4xl md:text-5xl font-bold">JirTech Solution</h1>
+    <p class="mt-4 text-lg">IT Technical Support Specialist | System Admin | Tech Solutions Provider</p>
+    <a href="#about" class="mt-6 inline-block px-6 py-3 bg-white text-blue-600 rounded-lg shadow hover:bg-gray-200 transition">
+      Learn More
+    </a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20 fade-up">
+    <h2 class="text-3xl font-bold text-blue-600 mb-6">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      I’m <strong>John Robert Honculada</strong>, an IT Technical Support Specialist with 5+ years of 
+      experience in troubleshooting, systems maintenance, and network support. My passion is 
+      creating reliable IT solutions while delivering excellent customer service.
+    </p>
+    <a href="assets/resume.pdf" download 
+       class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+       Download My Resume
+    </a>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-white py-20 fade-up">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-600 mb-10">Technical Skills</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Windows & Mac OS | Office 365 | Active Directory</div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Ticketing Systems & Helpdesk Platforms</div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Network Troubleshooting (VPN, DNS, DHCP)</div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Cybersecurity Fundamentals</div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Python & SQL Basics</div>
+        <div class="p-6 bg-gray-100 rounded-xl shadow hover:shadow-lg">Hardware Installation & Repair</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="max-w-6xl mx-auto px-6 py-20 fade-up">
+  <h2 class="text-3xl font-bold text-blue-600 mb-10">Portfolio</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+    
+    <!-- Project 1: Helpdesk Dashboard -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+      <img src="assets/helpdesk_dashboard.png" alt="Helpdesk Dashboard" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Helpdesk Dashboard</h3>
+        <p class="text-gray-600 mb-3">
+          A ticketing system built with React, Tailwind, and Framer Motion.  
+          Features include live search, CSV export, and smooth UI animations.
+        </p>
+        <a href="projects/helpdesk-dashboard/index.html" target="_blank" 
+           class="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+          🔗 View Project
+        </a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+      <img src="https://via.placeholder.com/400x200" alt="Project 2" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Network Optimization</h3>
+        <p class="text-gray-600">Configured routers, VPN, and IP surveillance setup.</p>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+      <img src="https://via.placeholder.com/400x200" alt="Project 3" class="w-full">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold">Web Portfolio</h3>
+        <p class="text-gray-600">Responsive web design portfolio showcasing IT solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20 fade-up">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-blue-600 mb-6">Contact Me</h2>
+      <p class="text-gray-600 mb-8">Fill out the form below and I’ll get back to you as soon as possible.</p>
+
+      <form action="/contact" method="POST" class="bg-white shadow-md rounded-lg p-8 space-y-6">
+        <div>
+          <label class="block text-gray-700 font-semibold">Name</label>
+          <input type="text" name="name" required class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold">Email</label>
+          <input type="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-semibold">Message</label>
+          <textarea name="message" rows="5" required class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" 
+    class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+    ↑
+  </button>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-6">
+    <p>© 2025 JirTech Solution | Designed by John Robert Honculada</p>
+  </footer>
+
+  <!-- Animation + Back to Top Script -->
+  <script>
+    // Fade-up animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+
+    // Back to top button
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
